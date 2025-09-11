@@ -47,7 +47,7 @@ The TCP with loss was noticeably slower due because when TCP retransmits lost pa
 This program makes several system calls such as 'bind', and 'listen.' What exactly is a system call?
  A system call is a way for a program to ask for the operating system's kernel to perform a service (like file or network access) that the program itself can't do directly.
 
- ##Question A.4: 
+ ## Question A.4 
  If you used LLMs for any part of this lab, explain how you used it.
  We used LLM to help explain topics not fully detailed in the lab handout like argc,file descriptors, and understanding how command fork() works.
 
