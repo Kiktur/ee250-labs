@@ -9,6 +9,7 @@
 ## QA.1 - QA.3
 Question 1: How did the reliability of UDP change when you added 50% loss to your local
 environment? Why did this occur?
+
 When 50% loss was added to the network environment when sending sequence 1-10 only some of the numbers showed up on the server like 1,3,6,9. The other numbers were missing this is because UDP does not retransmit lost packets, so any dropped messages never reach the server.
 
 Question 2: How did the reliability of TCP change? Why did this occur?
