@@ -18,7 +18,7 @@ Question 3: How did the speed of the TCP response change? Why might this happen?
 The TCP with loss was noticeably slower due because when TCP retransmits lost packets it has to wait for acknowledgements so there is more delay.
 
 ## QC.1 - QC.7
-1. What is argc and *argv[]?
+1. What is argc and \*argv[]?
   argc is the argument count. It's an integer that tells the program how many command line tokens(words) were typed when the program was run, this also includes the program name itself.
   argv[] is the argument vector. Its an array of C strings(chars*) which stores each of those arguments.
 
