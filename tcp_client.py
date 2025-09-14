@@ -11,11 +11,19 @@ HOST = "10.203.172.246"
 PORT = 10000
 
 def main():
-    # TODO: Create a socket and connect it to the server at the designated IP and port
+
+    # Creates socket using IPv4 with TCP connection
     with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
+        # Connects at IP address "HOST" using port number "PORT"
         s.connect((HOST, PORT))
+
+        # Prompts user for a message to send
         message = input("Write your message to the server: ")
+
+        # Encodes message as bytes
         message_bytes = message.encode("utf-8")
+
+        # Sends full message and waits for a response
         s.sendall(message_bytes)
         data = s.recv(1024)
 

@@ -38,6 +38,7 @@ The TCP with loss was noticeably slower due because when TCP retransmits lost pa
 5. What are the input parameters of bind() and listen()?
      bind() input includes socket fd, an address pointer, and its size.
 	 listen() takes a socket fd and a backlog size.
+       
 6.  Why use while(1)? Based on the code below, what problems might occur if there are multiple simultaneous connections to handle?
        while(1) is like a loop running forever. while(1) keeps the server running so it can continuously accept new client connections. However, since this server handles clients one at a time, multiple simultaneous connections can cause blocking, delays, or dropped connections.
 
