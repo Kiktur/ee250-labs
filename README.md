@@ -2,7 +2,7 @@
 
 ## Team Members
 - Victor Gutierrez (USC ID: 9841169875)
-- Angie Vasquez
+- Angie Vasquez (USC ID: 5537473368)
 
 ## Lab Question Answers
 
