@@ -1,0 +1,37 @@
+[
+    {
+        "recipient": "Victor_rec",
+        "sender": "Victor_send",
+        "subject": "test_subject",
+        "body": "This is the first email sent",
+        "id": "1c81a96c-2eca-4fd1-8a87-982586b69324"
+    },
+    {
+        "recipient": "Victor_rec",
+        "sender": "Victor_send",
+        "subject": "Important subject",
+        "body": "This is government-critical information",
+        "id": "a6723821-2593-47bc-8f80-4dfc79af91d9"
+    },
+    {
+        "recipient": "Angie_rec",
+        "sender": "Angie_send",
+        "subject": "Inaugural Email",
+        "body": "This is the first email from Angie",
+        "id": "8b7984dc-c5fe-4976-8699-35a67fd7eb36"
+    },
+    {
+        "recipient": "Victor_rec",
+        "sender": "Dummy_send",
+        "subject": "New Subject",
+        "body": "Dummy content",
+        "id": "c144620f-a8aa-490f-9b26-8b6798e97d3f"
+    },
+    {
+        "recipient": "Victor_rec",
+        "sender": "Victor_send",
+        "subject": "demo subject",
+        "body": "This is the first email sent",
+        "id": "49b01b11-d1b7-4c09-be7a-aceff8fbdfc2"
+    }
+]

@@ -1,0 +1,19 @@
+
+Send mail:
+python3 mail_client.py send -t "Victor_rec" -f "Victor_send" -s "test_subject" "This is the first email sent"
+
+
+View inbox:
+python3 mail_client.py inbox -u "Victor_rec"
+
+
+Get mail??:
+python3 mail_client.py get "1c81a96c-2eca-4fd1-8a87-982586b69324"
+
+
+Get mail sent from a certain user:
+python3 mail_client.py sent -u "Victor_send"
+
+
+Delete mail:
+python3 mail_client.py delete <mail_id>
