@@ -1,6 +1,6 @@
 
 Send mail:
-python3 mail_client.py send -t "Victor_rec" -f "Victor_send" -s "test_subject" "This is the first email sent"
+python3 mail_client.py send -t "Victor_demo" -f "Victor_send" -s "demo" "demo"
 
 
 View inbox:

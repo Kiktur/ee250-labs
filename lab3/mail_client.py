@@ -2,7 +2,7 @@ import requests
 import argparse
 import pprint # For pretty printing
 
-SERVER = 'http://localhost:5000'
+SERVER = 'http://10.94.188.246:5000'
 
 def send_mail(recipient: str, sender: str, subject: str, body: str) -> bool:
     """
