@@ -1,3 +1,4 @@
+"""Fetches and displays current weather conditions for a given city using the WeatherAPI."""
 import requests
 
 # WeatherAPI key
@@ -5,6 +6,15 @@ import requests
 WEATHER_API_KEY = ''  # TODO: Replace with your own WeatherAPI key
 
 def get_weather(city):
+    """Fetches and displays current weather conditions for a given city.
+    
+    Args: 
+        city: Name of the city in string accepted by the weatherAPI
+    
+    Raises: 
+        requests.RequestException: If the API request is unsuccessful.
+        KeyError: If expected fields are missing in the API response.
+    """
     # Build the API request URL using the base API endpoint, the API key, and the city name provided by the user.
     url = f"http://api.weatherapi.com/v1/current.json?key={WEATHER_API_KEY}&q={city}&aqi=no"
     # Make the HTTP request to fetch weather data using the 'requests' library.
