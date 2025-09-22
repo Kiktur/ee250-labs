@@ -32,25 +32,53 @@ def send_mail(recipient: str, sender: str, subject: str, body: str) -> bool:
     pprint.pprint(response.json())
 
 def get_inbox(recipient: str) -> None:
-    """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    """Fetches all mail entries for a given recipient by making a GET
+    request to the /mail/inbox/<recipient> endpoint.
+
+    Args:
+        recipient (str): The recipient whose inbox will be retrieved.
+
+    Returns:
+        None. Prints the JSON response containing the inbox mail entries.
     """
     response = requests.get(f'{SERVER}/mail/inbox/{recipient}')
     pprint.pprint(response.json())
 
 def get_sent(sender: str) -> None:
-    """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    """Fetches all mail entries sent by a given sender by making a GET
+    request to the /mail/sent/<sender> endpoint.
+
+    Args:
+        sender (str): The sender whose sent mail will be retrieved.
+
+    Returns:
+        None. Prints the JSON response containing the sent mail entries.
     """
     response = requests.get(f'{SERVER}/mail/sent/{sender}')
     pprint.pprint(response.json())
 
 def get_mail(mail_id: str) -> None:
-    """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    """Fetches a single mail entry by its unique ID by making a GET
+    request to the /mail/<mail_id> endpoint.
+
+    Args:
+        mail_id (str): The unique identifier of the mail entry.
+
+    Returns:
+        None. Prints the JSON response containing the mail entry if found.
     """
     response = requests.get(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
 
 def delete_mail(mail_id: str) -> None:
-    """TODO: fill out this docstring (using the send_mail docstring as a guide)
+    """Deletes a mail entry by its unique ID by making a DELETE
+    request to the /mail/<mail_id> endpoint.
+
+    Args:
+        mail_id (str): The unique identifier of the mail entry to delete.
+
+    Returns:
+        None. Prints the JSON response with the server's delete status.
     """
     response = requests.delete(f'{SERVER}/mail/{mail_id}')
     pprint.pprint(response.json())
