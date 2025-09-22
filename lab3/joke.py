@@ -5,6 +5,7 @@ import requests
 # WEATHER_API_KEY = 'your_api_key_here'  # TODO: Replace with your own WeatherAPI key
 
 def get_joke():
+    """Gets a random joke from the Joke API and prints it."""
     # TODO: Build the API request URL using the base API endpoint, the API key, and the city name provided by the user.
     url = "https://official-joke-api.appspot.com/random_joke"
     # TODO: Make the HTTP request to fetch weather data using the 'requests' library.
