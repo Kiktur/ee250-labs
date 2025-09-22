@@ -7,8 +7,8 @@ WEATHER_API_KEY = ''  # TODO: Replace with your own WeatherAPI key
 def get_weather(city):
     """Fetches and displays current weather conditions for a given city.
     
-    Args: 
-        city: Name of the city in string accepted by the weatherAPI
+    Args:
+        city (str): For the name of the city in a format accepted by WeatherAPI.
     
     Raises: 
         requests.RequestException: If the API request is unsuccessful.
