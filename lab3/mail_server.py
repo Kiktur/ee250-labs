@@ -12,7 +12,7 @@ thisdir = pathlib.Path(__file__).parent.absolute() # path to directory of this f
 
 def load_mail() -> List[Dict[str, str]]:
     """
-    Loads the mail from the JSON file
+    Loads the mail from the JSON file.
 
     Returns:
         list: A list of dictionaries representing the mail entries
@@ -125,10 +125,10 @@ def get_sent(sender: str) -> List[Dict[str, str]]:
 @app.route('/mail', methods=['POST'])
 def add_mail_route():
     """
-    Summary: Adds a new mail entry to the json file
+    Adds a new mail entry to the JSON file.
 
     Returns:
-        str: The id of the new mail entry
+        Flask Response: JSON {"id": <new_id>} with status 201.
     """
     mail_entry = request.get_json()
     mail_id = add_mail(mail_entry)
@@ -139,13 +139,13 @@ def add_mail_route():
 @app.route('/mail/<mail_id>', methods=['DELETE'])
 def delete_mail_route(mail_id: str):
     """
-    Summary: Deletes a mail entry from the json file
+    Deletes a mail entry from the JSON file.
 
     Args:
         mail_id (str): The id of the mail entry to delete
 
     Returns:
-        bool: True if the mail was deleted, False otherwise
+        Flask Response: JSON {"delete_status": "..."} with status 200 if deleted, 404 otherwise.
     """
     delete_attempt = delete_mail(mail_id)
     if delete_attempt == True:
@@ -162,13 +162,13 @@ def delete_mail_route(mail_id: str):
 @app.route('/mail/<mail_id>', methods=['GET'])
 def get_mail_route(mail_id: str):
     """
-    Summary: Gets a mail entry from the json file
+    Gets a mail entry from the JSON file.
 
     Args:
         mail_id (str): The id of the mail entry to get
 
     Returns:
-        dict: A dictionary representing the mail entry if it exists, None otherwise
+        Flask Response: JSON of the mail entry (or null) with status 200.
     """
     res = jsonify(get_mail(mail_id))
     res.status_code = 200 # Status code for "ok"
@@ -177,24 +177,24 @@ def get_mail_route(mail_id: str):
 @app.route('/mail/inbox/<recipient>', methods=['GET'])
 def get_inbox_route(recipient: str):
     """
-    Summary: Gets all mail entries for a recipient from the json file
+    Gets all mail entries for a recipient from the JSON file.
 
     Args:
         recipient (str): The recipient of the mail
 
     Returns:
-        list: A list of dictionaries representing the mail entries
+        Flask Response: JSON list of mail entries with status 200.
     """
     res = jsonify(get_inbox(recipient))
     res.status_code = 200
     return res
 
-# TODO: implement a rout e to get all mail entries for a sender
+# TODO: implement a route to get all mail entries for a sender
 # HINT: start with soemthing like this:
 @app.route('/mail/sent/<sender>', methods=['GET'])
 def get_sender(sender: str):
     """
-    Gets mail from a specific sender and returns all said mail entries
+    Gets mail from a specific sender and returns all said mail entries.
     """
     res = jsonify(get_sent(sender))
     res.status_code = 200
