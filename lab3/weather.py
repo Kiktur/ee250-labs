@@ -1,4 +1,3 @@
-"""Fetches and displays current weather conditions for a given city using the WeatherAPI."""
 import requests
 
 # WeatherAPI key
