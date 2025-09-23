@@ -34,9 +34,9 @@ def get_weather(city):
         # Parse the JSON data returned by the API. Extract and process the following information:
         print(f"Weather data for {city}:")
         # - Current temperature in Fahrenheit
-        print(f"Temp: {data['current']['temp_f']}")
+        print(f"Temp (F): {data['current']['temp_f']}")
         # - The "feels like" temperature
-        print(f"Feels like: {data['current']['feelslike_f']}")
+        print(f"Feels like (F): {data['current']['feelslike_f']}")
         # - Weather condition (e.g., sunny, cloudy, rainy)
         print(f"Weather condition: {data['current']['condition']['text']}")
         # - Humidity percentage
@@ -44,6 +44,7 @@ def get_weather(city):
         # - Wind speed and direction
         print(f"Wind speed (mph): {data['current']['wind_mph']}")
         # - Atmospheric pressure in mb
+        print(f"Atmospheric pressure (mb): {data['current']['pressure_mb']}")
         # - UV Index value
         print(f"UV: {data['current']['uv']}")
         # - Cloud cover percentage
