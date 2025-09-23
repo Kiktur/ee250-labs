@@ -195,6 +195,12 @@ def get_inbox_route(recipient: str):
 def get_sender(sender: str):
     """
     Gets mail from a specific sender and returns all said mail entries.
+
+    Args:
+        sender (str): The sender to filter the mail by
+
+    Returns:
+        Flask Response: JSON list of mail entries sent by the particular sender with status 200
     """
     res = jsonify(get_sent(sender))
     res.status_code = 200
