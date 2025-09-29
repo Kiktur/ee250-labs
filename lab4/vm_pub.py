@@ -15,7 +15,7 @@ def on_connect(client, userdata, flags, rc):
 
 
 if __name__ == '__main__':
-    #get IP address (TODO: done)
+    #get IP address
     hostname = socket.gethostname()
     ip_address = socket.gethostbyname(hostname)
     print(f"IP address is: {ip_address}")
@@ -58,11 +58,10 @@ if __name__ == '__main__':
         time_only = current_full_date.time()
         print(f"Current time is: {time_only}")
 
+        #publish date and time in their own topics
         client.publish("vagutier/date", f"{day_only}")
         print("Publishing date")
 
         client.publish("vagutier/time", f"{time_only}")
         print("Publishing time")
         
-        #publish date and time in their own topics
-        #"""your code here"""
