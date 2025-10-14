@@ -38,4 +38,4 @@ If the UDP bandwidth increases, the sender starts sending data fast for the netw
 
 5. Would performance be different on 5 GHz Wi-Fi vs. 2.4 GHz?
 
-Yes, because on 5GHz the Wi-Fi is faster but has a shorter range; however, the 2.4GHz is slower and can travel faster, through walls too.
+Yes, because on 5GHz the Wi-Fi is faster but has a shorter range; however, the 2.4GHz is slower and can travel farther, through walls too.
