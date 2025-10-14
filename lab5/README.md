@@ -18,3 +18,24 @@ Answer for Questions:
 7. A DataFrame is a way to store data in Python. The Data is stored in rows and columns, it is good to use because the data can be organized. This way, calculation and creating plots become easier.
 8. Error bars show us how much the signal changes from the average. They are useful  because it tells us if the signal is steady and how reliable the measurements are.
 9. From the measurements and plot, we observed signal strength being stronger when near the router/Raspberry Pi, and this weakened the further we moved away. For example, when we were outside of the lab space, as the door was the barrier, the readings were in the  -60 dBm range, and the further we were in the halfway it was -80dB. This showed that distance and obstacles reduce Wi-Fi signal strength since walls and doors block or absorb radio waves, causing weaker signals.
+
+## Part 2 Questions
+ After analyzing the data, students should answer the following:
+
+1. How does distance affect TCP and UDP throughput?
+
+Distance affects TCP and UDP throughput by decreasing them as the distance from the router increases.  
+
+2. At what distance does significant packet loss occur for UDP? The significant packets losses happen around 15 meters, that's when the signal was weaker.
+
+3. Why does UDP experience more packet loss than TCP?
+
+UDP has more packet loss since it doesn't resend lost packets, and it doesn't know if there were lost packets. It kinda shouts the data out rather than TCP resending data.
+
+4. What happens if we increase the UDP bandwidth (-b 100M)?
+
+If the UDP bandwidth increases, the sender starts sending data fast for the network, so the packets would more likely get lost.
+
+5. Would performance be different on 5 GHz Wi-Fi vs. 2.4 GHz?
+
+Yes, because on 5GHz the Wi-Fi is faster but has a shorter range; however, the 2.4GHz is slower and can travel faster, through walls too.
