@@ -9,6 +9,9 @@ Angie Vasquez (USC ID: 5537473368)
 
 Answer for Questions:
 
+Note on wifi measurements:
+The router for the apartment is located near the bedroom, which is where the largest signal strength was measured. The hallway and bathroom are located near the bedroom, but the bathroom measurement was recorded with the door closed, leading to a lower signal strength than the hallway. The kitchen and living room are located the farthest from the router with no doors inbetween, but the kitchen is farther around a corner than the living room. This matches with the measurements, since the kitchen has the lowest recorded signal strength.
+
 1. dBm measures how strong a signal is, using decibels relative to 1mW. It's on a logarithmic scale, so small differences like 3dB can either double or halve the signal power.
 2. OS needs to be checked because each operating system uses different commands for measuring Wi-Fi signal strength. For example, Linux uses iwconfig to show the signal level. Windows uses netsh wlan show interfaces, which shows the signal quality percentage, and macOS uses wdutil info to display the signal strength in dBm.
 3. subprocess.check_output lets python run a terminal command and also gets its results back. The output comes back in bytes, so we convert it to regular readable text. But when the command fails Python shows an error rather than giving us a result.
