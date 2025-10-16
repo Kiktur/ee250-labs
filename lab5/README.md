@@ -20,25 +20,25 @@ The router for the apartment is located near the bedroom, which is where the lar
 6. Standard deviation shows how much the measurements vary from the average. Here we can see and compare the Wi-Fi strength between the rooms. This way, we can see which ones are steady or which ones have signals that change a lot.
 7. A DataFrame is a way to store data in Python. The Data is stored in rows and columns, it is good to use because the data can be organized. This way, calculation and creating plots become easier.
 8. Error bars show us how much the signal changes from the average. They are useful  because it tells us if the signal is steady and how reliable the measurements are.
-9. From the measurements and plot, we observed signal strength being stronger when near the router/Raspberry Pi, and this weakened the further we moved away. For example, when we were outside of the lab space, as the door was the barrier, the readings were in the  -60 dBm range, and the further we were in the halfway it was -80dB. This showed that distance and obstacles reduce Wi-Fi signal strength since walls and doors block or absorb radio waves, causing weaker signals.
+9. From the plot, the signal strength was strongest near the bedroom where the router is located, and it became weaker in the areas farther away, such as the kitchen and livingroom. The bathroom also had a lower signal since the measurement was taken with the door closed, which likely blocked part of the signal. The weaker signal in certain locations is caused by distance from the router and obstacles like the walls,doors,and corners that absorb or reflect the Wi-Fi signal. Ultimately, this matches the results; the stronger signal areas had higher and more stable TCP/UDP speeds, while the weaker areas showed slower and less consistent performance. 
 
 ## Part 2 Questions
  After analyzing the data, students should answer the following:
 
 1. How does distance affect TCP and UDP throughput?
 
-Distance affects TCP and UDP throughput by decreasing them as the distance from the router increases.  
+Distance affects TCP and UDP throughput by decreasing them as the distance from the router increases. At 12m the speeds were highest and most stable, while at 15m and 20m they dropped and became less consistent. TCP stayed faster overall but UDP seemed to be more affected by distance and packet loss.
 
-2. At what distance does significant packet loss occur for UDP? The significant packets losses happen around 15 meters, that's when the signal was weaker.
+2. At what distance does significant packet loss occur for UDP? Significant packets losses happen around 15 meters, that's when the signal was weaker. The thoughput droppsed close to 0Mbps in some runs after being stable in the 12m test.
 
 3. Why does UDP experience more packet loss than TCP?
 
-UDP has more packet loss since it doesn't resend lost packets, and it doesn't know if there were lost packets. It kinda shouts the data out rather than TCP resending data.
+UDP has more packet loss since it doesn't resend lost packets, and it doesn't know if there were lost packets. It kinda shouts the data out rather than TCP resending data. In our expirement weaker Wi-Fi spots like the bathroom with the door closed and the kitchen father from the router coused more packet loss, as we saw a lower thoughout seen in those locations.
 
 4. What happens if we increase the UDP bandwidth (-b 100M)?
 
-If the UDP bandwidth increases, the sender starts sending data fast for the network, so the packets would more likely get lost.
+If the UDP bandwidth increases, the sender starts sending data faster to the network, so the packets are more likely to get lost. In our testing, the throughput would be more unstable, and the packetloss percentage would rise significantly as the router struggles to keep up with the higher send rate.
 
 5. Would performance be different on 5 GHz Wi-Fi vs. 2.4 GHz?
 
-Yes, because on 5GHz the Wi-Fi is faster but has a shorter range; however, the 2.4GHz is slower and can travel farther, through walls too.
+Yes, because 5GHz Wi-Fi is faster but has a shorter range,while 2.4GHz is slower and can travel farther and pass though walls better. In our experiment, 5GHz would likely give us higher throughput at short distances, but performance would drop off more quickly as we moved farther from the router.
