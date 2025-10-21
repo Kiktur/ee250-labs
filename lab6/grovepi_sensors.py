@@ -26,10 +26,10 @@ while True:
     # TODO: format LCD text according to threshhold
     if distance_cm < threshold_cm:
       setRGB(0, 255, 0)
-      setText_norefresh(f"{threshold_cm}cm   OBJ PRES\n{distance_cm}cm")
+      setText_norefresh(f"{threshold_cm} OBJ PRES\n{distance_cm}")
     else:
       setRGB(255, 0, 0)
-      setText_norefresh(f"{threshold_cm}cm           \n{distance_cm}cm")
+      setText_norefresh(f"{threshold_cm}           \n{distance_cm}")
 
   except IOError:
     print("Error")
