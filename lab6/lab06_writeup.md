@@ -32,7 +32,7 @@ For this lab, I wrote and tested my code on a VM since it was easier to edit the
 
 4.3
 
-There's a built in 0.2s inside the GrovePi library’s ultrasonicReds() function, its caused by a time.sleep(0.2) line in the code. The Raspberry Pi communicates with the GrovePi’s ATmega328P using the I2C protocol.
+There's a built in 0.2s inside the GrovePi library’s grovepi.ultrasonicRead(pin) function, its caused by a time.sleep(0.2) line in the code. The Raspberry Pi communicates with the GrovePi’s ATmega328P using the I2C protocol.
 
 
 
