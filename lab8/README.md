@@ -1,6 +1,6 @@
 Team Members: Victor Gutierrez (USC ID: 9841169875) Angie Vasquez (USC ID: 5537473368)
 
-#Question 1: What are the denominations of the US coins from the green, blue, and
+Question 1: What are the denominations of the US coins from the green, blue, and
 orange distributions?
 Can you think why the coins from the same denomination might show variation in
 weight, although they are specified to be of the same weight?
