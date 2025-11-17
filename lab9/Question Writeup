@@ -1,3 +1,4 @@
+Team Members: Victor Gutierrez (USC ID: 9841169875) Angie Vasquez (USC ID: 5537473368)
 Question 1a: What type of authentication are we using here (currently)? Does it use any
 Keys?
 The type of authentication being used is entering a username and a password within InfluxDB. This type of authentication does not use any keys.
